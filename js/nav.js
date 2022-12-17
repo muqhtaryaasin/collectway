@@ -6,8 +6,6 @@ function writeNavigation() {
     document.write('    <ul>');
     document.write('      <label class="btn cancel" for="check"><i class="fas fa-times"></i></label>');
     document.write('      <li><a href="index.html">Home</a></li>');
-    document.write('      <li><a href="#">About</a></li>');
-    document.write('      <li><a href="#">Services</a></li>');
     document.write('      <li><a href="#">Contact</a></li>');
     document.write('     <li><a href="#">Pricing</a></li>');
     document.write('      <li><a href="login-signup.html">Login</a></li>');
