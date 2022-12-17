@@ -24,12 +24,37 @@
               </div>
 
               <div class="input-field">
-                <label>Occurance(Monthtly)</label>
-                <input type="number" placeholder="Enter occurance" required>
+                <label>Number Of Occurance</label>
+                <input type="number" placeholder="Enter occurance" min="0" max="24" required>
               </div>
 
+              <div class="input-field">
+                <label>Enable/Disable Notification</label>
+                <input type="checkbox" placeholder="Notify?" required>
+              </div>
+
+              <div class="input-field">
+                <label>Payer's Name</label>
+                <input type="text" placeholder="Enter Payer's Name" required>
+              </div>
+
+              <div class="input-field">
+                <label>Payer's Email</label>
+                <input type="email" placeholder="Enter Payer's Email" required>
+              </div>
+
+              <div class="input-field">
+                <label>Payer's Phone Number</label>
+                <input type="tel" placeholder="Enter Payer's Phone Number" required>
+              </div>
             </div>
-            </div>
+          </div>
+          
+          <div class="buttons">
+            <button class="sumbit">
+                <span class="btnText">Save</span>
+                <i class="uil uil-navigator"></i>
+            </button>
           </div>
         </div>
       </form>

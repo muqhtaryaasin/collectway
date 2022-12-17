@@ -135,7 +135,7 @@ nav label.cancel{
 
 .container{
   position: relative;
-  max-width: 900px;
+  max-width: 1230px;
   width: 100%;
   border-radius: 6px;
   padding: 30px;
@@ -267,6 +267,7 @@ form .backBtn i{
 form .buttons{
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 form .buttons button , .backBtn{
   margin-right: 14px;
