@@ -2,18 +2,38 @@
 <html lang                      = "en" dir="ltr">
   <head>
     <meta charset               = "UTF-8">
-    <meta name                  = "viewport" content="width=device-width, initial-      scale=1.0">
+    <meta name                  = "viewport" content="width=device-width, initial-scale=1.0">
     <title> Navigation Menu Bar | CollectWay </title>
     <link rel                   = "stylesheet" href="../css/style.css">
-    <script src                 = "https://kit.fontawesome.com/a076d05399.js"></script>
-   </head>
-   <body>
-    <script src       = "js/nav.js"></script>
+    <script src="https://kit.fontawesome.com/70039fdc28.js" crossorigin="anonymous"></script>
+    <script src = "../js/nav.js"></script>  
+  </head>
+   <body>   
     <script>writeNavigation();</script>
-    <section>
-        <div>
-            test
+    <div class="container">
+      <header>Add New Collection Path</header>
+      <form action="#">                                                                                                                                                                                                     
+        <div class="form first">
+          <div class="details personal">
+            <span class="title">Path Detail</span>
+            <div class="fields">
+
+              <div class="input-field">
+                <label>Path Name</label>
+                <input type="text" placeholder="Enter path name" required>
+              </div>
+
+              <div class="input-field">
+                <label>Occurance(Monthtly)</label>
+                <input type="number" placeholder="Enter occurance" required>
+              </div>
+
+            </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </form>
+    </div>
+
    </body>
 </html>

@@ -10,10 +10,11 @@ function writeNavigation() {
     document.write('      <li><a href="#">Services</a></li>');
     document.write('      <li><a href="#">Contact</a></li>');
     document.write('     <li><a href="#">Feedback</a></li>');
-    document.write('      <li><a href="#">login</a></li>');
+    document.write('      <li><a href="#">Login</a></li>');
     document.write('    </ul>');
     document.write('    <label for="check" class="btn bars"><i class="fas fa-bars"></i></label>');
     document.write('  </div>');
     document.write('</div>');
     document.write('</nav>');
   }
+
