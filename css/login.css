@@ -7,8 +7,12 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+body{
+    background: #4070f4;
+}
 .container{
-    height: 100vh;
+    height: 79vh;
     width: 100%;
     display: flex;
     align-items: center;
