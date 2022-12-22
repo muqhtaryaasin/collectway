@@ -3,12 +3,33 @@ import handshake from './assets/handshake.png';
 import increase from './assets/increase.png';
 
 // document.getElementById("google").src = google;
-document.getElementById("handshake").src = handshake;
-document.getElementById("increase").src = increase;
+if (document.getElementById('google')) {
+  document.getElementById("google").src = google;
+}
+if (document.getElementById('handshake')) {
+  document.getElementById("handshake").src = handshake;
+}
+if (document.getElementById('increase')) {
+  document.getElementById("increase").src = increase;
+}
 
-// import style from "./css/style.css";
+console.log(window.location.pathname);
+if (window.location.pathname === '/login-signup.html') {
+  import("./css/login.css");
+}
+
+if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+  import("./css/style.css");
+}
+
+// if (document.getElementById('login-form')) {
+//     import "./css/login.css";
+// }
+ import "./css/nav.css";
+// import "./css/style.css";
 
 import {writeNavigation} from "./js/nav.js";
+window.onload = writeNavigation;
 import {forms, pwShowHide, links} from "./js/script.js";
 
 // Import the functions you need from the SDKs you need
@@ -44,4 +65,4 @@ onAuthStateChanged(auth, user => {
 })
 
 
-window.onload = writeNavigation;
+
