@@ -1,4 +1,4 @@
-export const forms = document.querySelector(".forms"),
+const forms = document.querySelector(".forms"),
       pwShowHide = document.querySelectorAll(".eye-icon"),
       links = document.querySelectorAll(".link");
 

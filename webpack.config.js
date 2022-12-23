@@ -6,7 +6,7 @@ module.exports = {
     devtool: 'eval-source-map',
     // entry: './src/index.js',
     entry: {
-        index: './src/importer/index.js',
+        index: './src/index.js',
         image: './src/importer/image_importers.js',
         css: './src/importer/css_importers.js',
         js: './src/importer/js_importers.js'
