@@ -6,6 +6,10 @@ if (document.getElementById('google')) {
   document.getElementById("google").src = google;
 }
 
+if (document.getElementById('google')) {
+  document.getElementById("google").src = google;
+}
+
 if (document.getElementById('handshake')) {
   document.getElementById("handshake").src = handshake;
 }

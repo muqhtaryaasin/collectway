@@ -2,6 +2,10 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
+import uiDataMessage from './data/ui_messages.json';
+
+//import 'boxicons';
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,50 +25,16 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
+export {auth, createUserWithEmailAndPassword};
+export {uiDataMessage};
 
+//const ui_messages = require('./data/ui_messages.json');
+// let appData;
 
-const signupForm = document.getElementById('signup');
-console.log('signupForm',signupForm);
-if (signupForm) {
-  signupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const emailInput = document.querySelector('#email');
-    const emailValue = emailInput.value;
-    console.log(emailValue);
-
-    const passwordInput = document.querySelector('#password');
-    const passwordValue = passwordInput.value;
-    console.log(passwordValue);
-
-    createUserWithEmailAndPassword(auth, emailValue, passwordValue)
-      .then((cred) => {
-        console.log('user created : ', cred.user);
-        signupForm.reset();
-      })
-      .catch((err) => {
-        console.log(err.message);
-
-        const myModel = document.getElementById('myModal');
-        myModel.style.display = 'block';
-        const pElement = myModel.querySelector('p');
-        console.log(pElement);
-        pElement.innerHTML = err.message;
-
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick = function() {
-          myModel.style.display = "none";
-      }
-      })
-
-  });
-}
-
-const msgModal = document.getElementById('myModal');
-console.log('msgModal', msgModal);
-  if (msgModal){
-    document.getElementById('okButton').addEventListener('click', function() {
-      document.getElementById('myModal').style.display = 'none';
-      
-    });  
-  }
+// Fetch the data from the JSON file and store it in the global variable
+// fetch(ui_messages)
+//   .then(response => response.json())
+//   .then(data => {
+//     appData = data;
+//     console.log(appData);
+//   });

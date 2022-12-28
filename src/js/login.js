@@ -1,3 +1,6 @@
+import { auth, createUserWithEmailAndPassword} from "../index.js";
+import {getUImessage} from "./ui-messages.js";
+
 const forms = document.querySelector(".forms"),
       pwShowHide = document.querySelectorAll(".eye-icon"),
       links = document.querySelectorAll(".link");
@@ -25,3 +28,48 @@ links.forEach(link => {
        forms.classList.toggle("show-signup");
     })
 })
+
+const signupForm = document.getElementById('signup');
+console.log('signupForm',signupForm);
+if (signupForm) {
+  signupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const emailInput = document.querySelector('#email');
+    const emailValue = emailInput.value;
+
+    const passwordInput = document.querySelector('#password');
+    const passwordValue = passwordInput.value;
+
+    createUserWithEmailAndPassword(auth, emailValue, passwordValue)
+      .then((cred) => {
+        console.log('user created : ', cred.user);
+        signupForm.reset();
+      })
+      .catch((err) => {
+        console.log(err.message);
+        const errorMsg = getUImessage(err.code);
+
+        const myModel = document.getElementById('myModal');
+        myModel.style.display = 'block';
+        const pElement = myModel.querySelector('p');
+        console.log(pElement);
+        pElement.innerHTML = errorMsg;
+
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() {
+          myModel.style.display = "none";
+      }
+      })
+
+  });
+}
+
+const msgModal = document.getElementById('myModal');
+console.log('msgModal', msgModal);
+  if (msgModal){
+    document.getElementById('okButton').addEventListener('click', function() {
+      document.getElementById('myModal').style.display = 'none';
+      
+    });  
+  }

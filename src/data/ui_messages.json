@@ -1,0 +1,12 @@
+[
+    {
+        "code" : "auth/email-already-in-use",
+        "type" : "ERROR",
+        "msg" : "This email is already in use. Please try again with a different email."
+    },
+    {
+        "code" : "default",
+        "type" : "ERROR",
+        "msg" : "An error occurred. Please try again."
+    }
+]
