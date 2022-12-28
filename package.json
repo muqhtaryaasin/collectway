@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/muqhtaryaasin/collectway#readme",
   "dependencies": {
-    "boxicons": "^2.1.4",
     "file-loader": "^6.2.0",
     "firebase": "^9.15.0",
     "html-webpack-plugin": "^5.5.0"

@@ -4,7 +4,7 @@ import { getAnalytics } from "firebase/analytics";
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
 import uiDataMessage from './data/ui_messages.json';
 
-//import 'boxicons';
+// import 'boxicons';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries

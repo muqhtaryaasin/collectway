@@ -30,7 +30,7 @@ links.forEach(link => {
 })
 
 const signupForm = document.getElementById('signup');
-console.log('signupForm',signupForm);
+let myModel = null;
 if (signupForm) {
   signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -47,29 +47,31 @@ if (signupForm) {
         signupForm.reset();
       })
       .catch((err) => {
-        console.log(err.message);
+        signupForm.reset();
         const errorMsg = getUImessage(err.code);
 
-        const myModel = document.getElementById('myModal');
+        myModel = document.getElementById('myModal');
         myModel.style.display = 'block';
         const pElement = myModel.querySelector('p');
-        console.log(pElement);
         pElement.innerHTML = errorMsg;
 
         var span = document.getElementsByClassName("close")[0];
         span.onclick = function() {
           myModel.style.display = "none";
-      }
+        }
+
+        const msgContent = document.getElementById('msgContent');
+        console.log(msgContent);
+        msgContent.style.backgroundColor = '#f43636';
       })
 
+      
+     
   });
 }
 
-const msgModal = document.getElementById('myModal');
-console.log('msgModal', msgModal);
-  if (msgModal){
-    document.getElementById('okButton').addEventListener('click', function() {
-      document.getElementById('myModal').style.display = 'none';
-      
-    });  
-  }
+// if (myModel){
+//   const msgContent = document.getElementById('msgContent');
+//   console.log(msgContent);
+//   msgContent.style.backgroundColor = 'red';
+// }

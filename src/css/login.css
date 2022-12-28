@@ -197,12 +197,12 @@ a.google span{
   /* Modal Content */
   .modal-content {
     background-color: #fefefe;
-    margin: auto;
+    margin: 10px 100px 10px 100px;
     padding: 20px;
     border: 1px solid #888;
     border-radius: 10px;
-    width: 80%;
-    height: 50%;
+    width: auto;
+    height: auto;
     font-family: 'Poppins', sans-serif;
   }
   
