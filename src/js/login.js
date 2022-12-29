@@ -1,5 +1,6 @@
+import { FirebaseError } from "firebase/app";
 import { auth, createUserWithEmailAndPassword} from "../index.js";
-import {getUImessage} from "./ui-messages.js";
+import {getUImessage, updateUImessageDialog} from "./ui-messages.js";
 
 const forms = document.querySelector(".forms"),
       pwShowHide = document.querySelectorAll(".eye-icon"),
@@ -30,7 +31,6 @@ links.forEach(link => {
 })
 
 const signupForm = document.getElementById('signup');
-let myModel = null;
 if (signupForm) {
   signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -45,24 +45,12 @@ if (signupForm) {
       .then((cred) => {
         console.log('user created : ', cred.user);
         signupForm.reset();
+        updateUImessageDialog('user created');
       })
       .catch((err) => {
         signupForm.reset();
-        const errorMsg = getUImessage(err.code);
-
-        myModel = document.getElementById('myModal');
-        myModel.style.display = 'block';
-        const pElement = myModel.querySelector('p');
-        pElement.innerHTML = errorMsg;
-
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick = function() {
-          myModel.style.display = "none";
-        }
-
-        const msgContent = document.getElementById('msgContent');
-        console.log(msgContent);
-        msgContent.style.backgroundColor = '#f43636';
+        console.error(err);
+        updateUImessageDialog(err);      
       })    
   });
 }

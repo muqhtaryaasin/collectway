@@ -4,7 +4,6 @@ import { getAnalytics } from "firebase/analytics";
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
 import uiDataMessage from './data/ui_messages.json';
 
-// import 'boxicons';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -27,14 +26,3 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 export {auth, createUserWithEmailAndPassword};
 export {uiDataMessage};
-
-//const ui_messages = require('./data/ui_messages.json');
-// let appData;
-
-// Fetch the data from the JSON file and store it in the global variable
-// fetch(ui_messages)
-//   .then(response => response.json())
-//   .then(data => {
-//     appData = data;
-//     console.log(appData);
-//   });

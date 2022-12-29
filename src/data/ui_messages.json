@@ -8,5 +8,10 @@
         "code" : "default",
         "type" : "ERROR",
         "msg" : "An error occurred. Please try again."
+    },
+    {
+        "code" : "user created",
+        "type" : "SUCCESS",
+        "msg" : "Welcome to our service! Your account has been created."
     }
 ]
