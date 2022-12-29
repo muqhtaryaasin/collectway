@@ -14,3 +14,15 @@ export function writeNavigation() {
     </div>
     `
   };
+
+export function messageDialog(){
+  document.getElementById('messageDialog').innerHTML = `
+  <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div id="msgContent" class="modal-content">          
+        <span class="close">&times;</span>
+        <p></p>         
+      </div>
+  </div>
+  `
+};

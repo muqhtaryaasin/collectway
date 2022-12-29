@@ -63,15 +63,7 @@ if (signupForm) {
         const msgContent = document.getElementById('msgContent');
         console.log(msgContent);
         msgContent.style.backgroundColor = '#f43636';
-      })
-
-      
-     
+      })    
   });
 }
 
-// if (myModel){
-//   const msgContent = document.getElementById('msgContent');
-//   console.log(msgContent);
-//   msgContent.style.backgroundColor = 'red';
-// }
